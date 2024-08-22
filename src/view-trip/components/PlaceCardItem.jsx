@@ -4,26 +4,9 @@ import axios from 'axios';
 import handleloc from '../../lib/MapRedirect';
 import fetchImage from '@/lib/FetchImg';
 
-function PlaceCardItem({ place, trip ,delay }) {
-  const page = 1;
+function PlaceCardItem({ place, trip }) {
   const [pic, setPic] = useState();
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  //console.log(place);
-  
-  const [currentIndex, setCurrentIndex] = useState(0);
-
- /* useEffect(() => {
-    const timer = setTimeout(() => {
-      handleSearch(place.placeName);
-      console.log(delay);
-    },delay); 
-    return () => clearTimeout(timer);
-  }, [delay]);*/
-
-  
-
-
-  const handleSearch = async (place) => {
+  /*const handleSearch = async (place) => {
     try {
       const img = await fetchImage(place);
       const allImages = [];
@@ -37,7 +20,7 @@ function PlaceCardItem({ place, trip ,delay }) {
     } catch (error) {
       console.error("Error fetching images:", error);
     }
-  };
+  };*/
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -72,7 +55,7 @@ function PlaceCardItem({ place, trip ,delay }) {
       src={pic && pic[0] ? pic[0].image : '/placeholder.jpg'}
       className='w-[160px] h-[160px] rounded-xl object-cover flex-shrink-0'
       alt={place.placeName}
-      //onError={handleImageError(pic)}
+     
     />
     <div>
       <h2 className='font-medium m-auto'>{place.placeName}</h2>

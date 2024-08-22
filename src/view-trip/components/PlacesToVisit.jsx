@@ -3,11 +3,6 @@ import PlaceCardItem from './PlaceCardItem';
 
 function PlacesToVisit({trip}) {
     const itinerary=trip?.itineraryData?.itinerary;
-  useEffect(()=>{
-    const timer=setTimeout(()=>{
-      console.log("plan");
-    },3000)
-  },[])
   return (
     <div className='my-8'>
     <h2 className='font-bold text-xl'>Places to Visit</h2>
@@ -22,7 +17,7 @@ function PlacesToVisit({trip}) {
             item.plan.map((place,i)=>(
               <div key={i}>
               <h2>{place.time}</h2>
-              <PlaceCardItem place={place} trip={trip} delay={i*1000}/>
+              <PlaceCardItem place={place} trip={trip}/>
               </div>
             ))
           }
