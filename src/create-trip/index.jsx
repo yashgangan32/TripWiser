@@ -92,7 +92,7 @@ function CreateTrip() {
         Simply provide some basic information, and our trip planner will
         generate a customized itinerary based on your preferences.
       </p>
-      <div className="mt-16 flex flex-col gap-9">
+      <div className="mt-9 flex flex-col gap-9">
         <div>
           <h2 className="text-xl my-3 font-medium">
             What is your destination of choice?
@@ -109,7 +109,7 @@ function CreateTrip() {
           />
         </div>
         <div>
-          <h2 className="text-xl my-3 font-medium">
+          <h2 className="text-xl my-2 font-medium">
             How many days are you planning your trip?
           </h2>
           <Input
@@ -124,7 +124,7 @@ function CreateTrip() {
         </div>
       </div>
       <div>
-        <h2 className="text-xl mt-10 mb-3 font-medium">
+        <h2 className="text-xl mt-8 mb-3 font-medium">
           What is your budget for the trip?
         </h2>
         <p className="text-gray-500 text-xl">
@@ -140,9 +140,9 @@ function CreateTrip() {
                 ${formData?.budget === item.title && "border-blue-500 bg-blue-50 shadow-lg"}
                 `}
             >
-              <h2 className="text-3xl">{item.icon}</h2>
-              <h2 className="font-bold text-lg">{item.title}</h2>
-              <h2 className="text-sm text-gray-500">{item.desc}</h2>
+              <h2 className="text-3xl text-center md:text-left">{item.icon}</h2>
+              <h2 className="font-bold  text-sm md:text-xl">{item.title}</h2>
+              <h2 className="text-sm text-gray-500 md:text-xl">{item.desc}</h2>
             </div>
           ))}
         </div>
@@ -162,7 +162,7 @@ function CreateTrip() {
             >
               <h2 className="text-3xl">{item.icon}</h2>
               <h2 className="font-bold text-lg">{item.title}</h2>
-              <h2 className="text-sm text-gray-500">{item.desc}</h2>
+              <h2 className="text-sm text-gray-500 md:text-xl">{item.desc}</h2>
             </div>
           ))}
         </div>

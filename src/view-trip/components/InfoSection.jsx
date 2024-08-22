@@ -51,7 +51,7 @@ function InfoSection({ trip }) {
 
       <div>
         {showCarousel && (
-          <div className="relative w-full h-[75vh] mx-auto overflow-hidden">
+          <div className="relative w-full md:h-[75vh] h-[50vh] mx-auto overflow-hidden">
             <img
               src={pic[currentIndex]}
               alt={`pic ${currentIndex + 1}`}
@@ -59,13 +59,13 @@ function InfoSection({ trip }) {
             />
             <button
               onClick={goToPrevious}
-              className="absolute top-1/2 left-4 transform -translate-y-1/2 font-bold text-3xl text-white p-3 rounded-full shadow-lg"
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 font-bold md:text-3xl text-xl text-white p-3 rounded-full shadow-lg"
             >
               &lt;
             </button>
             <button
               onClick={goToNext}
-              className="absolute top-1/2 right-4 transform -translate-y-1/2 font-bold text-3xl text-white p-3 rounded-full shadow-lg"
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 font-bold md:text-3xl text-xl text-white p-3 rounded-full shadow-lg"
             >
               &gt;
             </button>
@@ -79,17 +79,17 @@ function InfoSection({ trip }) {
         )}
       </div >
       <div className='flex flex-row justify-end'>
-        <Link to={"/"} className='text-white  bg-red-700 hover:bg-red-800 font-medium rounded-full text-sm px-5 py-1 mt-6 text-center'>Log Out</Link>
+        <Link to={"/"} className='text-white  bg-red-700 hover:bg-red-800 font-medium rounded-full text-sm md:px-5 p-4 py-1 mt-6 text-center'>Log Out</Link>
       </div>
 
       <div className='flex justify-between items-center '>
         <div className='my-6 flex flex-col gap-2'>
           <h2 className='font-bold text-2xl'>{trip?.userSelection?.location}</h2>
           <div className='flex gap-6 mt-4 flex-col text-center md:flex-row'>
-            <h2 className='bg-gray-200 font-medium text-gray-600 rounded-full p-2 px-4 md:text-md'>🗓️ {trip?.userSelection?.noOfDays} Day</h2>
-            <h2 className='bg-gray-200 font-medium text-gray-600 rounded-full p-2 px-4 md:text-md'>👩‍👧‍👦 Number of Travelers: {trip?.userSelection?.travelWith} People</h2>
-            <h2 className='bg-gray-200 font-medium text-gray-600 rounded-full p-2 px-4 md:text-md'>💵 {trip?.userSelection?.budget} Budget</h2>
-            <Link to={"/create-trip"} className='text-white focus:outline-none focus:ring-4 bg-[#f56551] focus:ring-[#b83827] hover:bg-[#b83827] font-medium rounded-full text-sm px-5 py-2.5 text-center'>Create Again</Link>
+            <h2 className='bg-gray-200 font-medium text-sm text-gray-600 rounded-full p-2 px-4 md:text-md'>🗓️ {trip?.userSelection?.noOfDays} Day</h2>
+            <h2 className='bg-gray-200 font-medium text-sm text-gray-600 rounded-full p-2 px-4 md:text-md'>👩‍👧‍👦 Number of Travelers: {trip?.userSelection?.travelWith} People</h2>
+            <h2 className='bg-gray-200 font-medium text-sm text-gray-600 rounded-full p-2 px-4 md:text-md'>💵 {trip?.userSelection?.budget} Budget</h2>
+            <Link to={"/create-trip"} className='text-white md:text-md  focus:outline-none focus:ring-4 bg-[#f56551] focus:ring-[#b83827] hover:bg-[#b83827] font-medium rounded-full text-sm px-5 py-2.5 text-center'>Create Again</Link>
           </div>
         </div>
       </div>

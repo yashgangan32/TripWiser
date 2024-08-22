@@ -17,29 +17,28 @@ function Footer() {
                     </button>
                 </div>
             </div>
-            <div className='flex flex-row justify-between m-8'>
+            <div className='flex md:flex-row flex-col justify-between md:m-8 text-center md:text-start'>
             <div>
-                <p className="font-semibold text-gray-800 dark:text-white">Quick Link</p>
-
-                <div className="flex flex-col items-start mt-5 space-y-2">
+                <p className="font-semibold text-gray-800 dark:text-white mt-5">Quick Link</p>
+                <div className="flex flex-col md:items-start md:mt-5 space-y-2 ">
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Home</p>
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Who We Are</p>
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Our Philosophy</p>
                 </div>
             </div>
             <div>
-                <p className="font-semibold text-gray-800 dark:text-white">Support</p>
+                <p className="font-semibold text-gray-800 dark:text-white mt-5">Support</p>
 
-                <div className="flex flex-col items-start mt-5 space-y-2">
+                <div className="flex flex-col md:items-start md:mt-5 space-y-2">
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Documentation</p>
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Api Status</p>
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Guides</p>
                 </div>
             </div>
             <div>
-                <p className="font-semibold text-gray-800 dark:text-white">Company</p>
+                <p className="font-semibold text-gray-800 dark:text-white mt-5">Company</p>
 
-                <div className="flex flex-col items-start mt-5 space-y-2">
+                <div className="flex flex-col md:items-start md:mt-5 space-y-2">
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">About</p>
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Careers</p>
                     <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">Blog</p>
@@ -55,19 +54,30 @@ function Footer() {
         
         <div className="sm:flex sm:items-center sm:justify-between">
             <div className="flex flex-1 gap-4 hover:cursor-pointer justify-center">
-                <img src="https://www.svgrepo.com/show/303139/google-play-badge-logo.svg" width="130" height="110" alt="" />
-                <img src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg" width="130" height="110" alt="" />
+                <img src="https://www.svgrepo.com/show/303139/google-play-badge-logo.svg" className='w-[130px] h-[110px] md:w-[180px] md:h-[150px]' alt="" />
+                <img src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg" className='w-[130px] h-[110px] md:w-[180px] md:h-[150px]' alt="" />
             </div>
             
             <div className="flex gap-4 hover:cursor-pointer justify-center">
-                <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" width="30" height="30" alt="fb" />
+                <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" width="30" height="30"   alt="fb" />
                 <img src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" width="30" height="30" alt="tw" />
                 <img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" width="30" height="30" alt="inst" />
                 <img src="https://www.svgrepo.com/show/94698/github.svg" className="" width="30" height="30" alt="gt" />
+                <div className='hidden md:block'>
+                    <div className='flex gap-4'>
                 <img src="https://www.svgrepo.com/show/22037/path.svg" width="30" height="30" alt="pn" />
                 <img src="https://www.svgrepo.com/show/28145/linkedin.svg" width="30" height="30" alt="in" />
                 <img src="https://www.svgrepo.com/show/22048/dribbble.svg" className="" width="30" height="30" alt="db" />
+                </div>
+                </div>
             </div>
+            <div className='block md:hidden'>
+                <div className='flex mt-3 justify-center gap-4'>
+                <img src="https://www.svgrepo.com/show/22037/path.svg" width="30" height="30" alt="pn" />
+                <img src="https://www.svgrepo.com/show/28145/linkedin.svg" width="30" height="30" alt="in" />
+                <img src="https://www.svgrepo.com/show/22048/dribbble.svg" className="" width="30" height="30" alt="db" />
+                </div>
+                </div>
         </div>
         <p className="font-sans p-8 text-center md:text-center md:text-lg md:p-4 ">© 2023 Yash Gangan. All rights reserved.</p>
     </div>

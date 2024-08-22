@@ -3,8 +3,8 @@ import { Button } from '../ui/button'
 import {Link} from 'react-router-dom'
 function Hero() {
   return (
-    <div className='flex flex-col items-center mx-56 gap-9'>
-        <h1 className='font-extrabold text-[50px]  md:mt-36 mt-14 text-center'>
+    <div className='flex flex-col items-center m-auto gap-9'>
+        <h1 className='font-extrabold text-[50px]  md:mt-36 mt-14 text-center p-2'>
             <span className='text-[#f56551] '>
               Discover Your Next Adventure With AI:</span> Personalized ItineRaries at Your Fingertips
             
@@ -13,7 +13,7 @@ function Hero() {
             </p>
         </h1>
         <Link to={'/login'}>
-        <Button>Get Started,It's Free</Button>
+        <Button className="mb-10">Get Started,It's Free</Button>
         </Link>
     </div>
   )

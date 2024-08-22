@@ -45,23 +45,29 @@ function PlaceCardItem({ place, trip }) {
   };
   return (
     <div
-    className={`relative border rounded-xl p-3 mt-2 flex gap-5 w-90 h-48 transition-all cursor-pointer ${isHovered ? 'scale-105 shadow-md' : ''}`}
+    className={`relative border rounded-xl p-2 mt-2 flex-grow flex-col md:flex-row gap-5 m:w-90 m:h-48 transition-all cursor-pointer ${isHovered ? 'scale-105 shadow-md' : ''}`}
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
     onTouchStart={handleTouchStart}
     onTouchEnd={handleTouchEnd}
   >
+    <div className='flex'>
     <img
       src={pic && pic[0] ? pic[0].image : '/placeholder.jpg'}
-      className='w-[160px] h-[160px] rounded-xl object-cover flex-shrink-0'
+      className='md:w-[160px] md:h-[160px] w-[125px] h-[125px] rounded-xl object-cover flex-shrink-0'
       alt={place.placeName}
      
     />
     <div>
-      <h2 className='font-medium m-auto'>{place.placeName}</h2>
-      <p className='text-sm text-gray-500 mt-1'>{place.placeDetails}</p>
+      <h2 className='font-medium pl-2 '>{place.placeName}</h2>
+      <p className='text-sm text-gray-500  md:block hidden p-2 '>{place.placeDetails}</p>
+    </div>
+    </div>
+    <div>
+      <p className='text-sm text-gray-500 mt-2 p-1 block md:hidden'>{place.placeDetails}</p>
+      
       <GrMapLocation
-        className='hover:scale-150 absolute bottom-3 right-3 text-gray-700 w-[20px] h-[20px]'
+        className='hover:scale-150 absolute  md:right-3 right-3 top-28 md:top-4 text-gray-700 w-[20px] h-[20px]'
         onClick={handleLocationClick}
       />
     </div>
