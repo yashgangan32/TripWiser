@@ -10,7 +10,7 @@ function Header() {
   return (
     <div >
       {(isLoginPage || creatPage) && (<div className='p-3 shadow-sm flex justify-between items-center px-5'>
-        <img src='/trpwise.png' alt='logo' className="w-20" />
+        <img src='/trpwise.png' alt='logo' className="w-24" />
         {
           isLoginPage && (
           <Link to="/login">
